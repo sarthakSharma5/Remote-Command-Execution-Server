@@ -1,0 +1,54 @@
+<HTML>
+	<HEAD>
+		<TITLE>Use Container @server</TITLE>
+		<STYLE>
+			.head {
+				border: 2px outset blue;
+				background-color: cyan;
+				border-radius: 20px;
+				padding: 10px;
+			}
+			.form {
+				border: 2px outset black;
+				background-color: #f2f2f2;
+				border-radius: 30px;
+				padding: 20px;
+			}
+			INPUT[type=text], select {
+				width: 80%;
+				padding: 12px;
+				margin: 8px;
+				border-radius: 10px;
+			}
+			INPUT[type=submit], select {
+				border-radius: 10px;
+			}
+			.dropdown {
+				width: 65%;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY topmargin='3%' leftmargin='25%'>
+		<CENTER>
+			<H2 class='head'>Use your Container</H2>
+		</CENTER>
+		Provide the neccessary info req below:
+		<BR/><BR/>
+		<DIV class='form'>
+		<FORM action='http://ServerIP/cgi-bin/cont.py'>
+			Use your Container:
+			<BR/>
+			<CENTER>
+				<INPUT type='text' name='cnm' placeholder='Give container name'/>
+			</CENTER>	
+			<BR/>
+			Provide Command:
+			<CENTER>
+				<INPUT type='text' name='cmd' placeholder='Give command to execute inside Container'/>
+				<BR/><BR/>
+				<INPUT type='submit'>
+			</CENTER>
+		</FORM>
+		</DIV>
+	</BODY>
+</HTML>

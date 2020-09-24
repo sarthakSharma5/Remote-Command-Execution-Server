@@ -1,0 +1,54 @@
+<HTML>
+	<HEAD>
+		<TITLE>Use Docker @server</TITLE>
+		<STYLE>
+			.head {
+				border: 2px outset blue;
+				background-color: cyan;
+				border-radius: 20px;
+				padding: 10px;
+			}
+			.form {
+				border: 2px outset black;
+				background-color: #f2f2f2;
+				border-radius: 30px;
+				padding: 20px;
+			}
+			INPUT[type=text], select {
+				width: 100%;
+				padding: 12px;
+				margin: 8px;
+				border-radius: 10px;
+			}
+			.dropdown {
+				width: 65%;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY topmargin='20' leftmargin='25%'>
+		<CENTER>
+			<H2 class='head'>Use Docker and launch your personal OS in seconds</H2>
+		</CENTER>
+		Provide the neccessary info req below:
+		<BR/><BR/>
+		<DIV class='form'>
+		<FORM action='http://ServerIP/cgi-bin/docker.py'>
+			Give your OS/Container some name:
+			<BR/>
+			<INPUT type='text' name='cnm'/>
+			<BR/><BR/>
+			Choose one docker image:
+			<SELECT name='dimg' class='dropdown'>
+				<OPTION>httpd:latest</OPTION>
+				<OPTION>centos:latest</OPTION>
+				<OPTION>sarthaksharma5/dynamocluster:latest</OPTION>
+				<OPTION>vimal13/apache-webserver-php:latest</OPTION>
+			</SELECT>
+			<BR/><BR/>
+			<CENTER>
+				<INPUT type='submit'>
+			</CENTER>
+		</FORM>
+		</DIV>
+	</BODY>
+</HTML>

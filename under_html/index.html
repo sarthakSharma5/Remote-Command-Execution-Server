@@ -1,0 +1,65 @@
+<HTML>
+	<HEAD>
+		<TITLE>Welcome</TITLE>
+		<STYLE>
+			.head {
+				background-color: red;
+				border: 5px outset black;
+				border-radius: 10px;
+			}
+			.form {
+				border-radius: 20px;
+				padding: 20px;
+				margin-left: 5%;
+				margin-right: 40%;
+				text-align: left;
+			}
+			.footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				color: grey;
+				text-align: center;
+			}
+			BUTTON[type='submit'] {
+				border-radius: 5px;
+				width: 60px;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY topmargin='20' leftmargin='90'>
+		<CENTER>
+			<H1 class='head'>Welcome to RedHat Linux</H1>
+		</CENTER>
+		<BR/>
+		<H4>Feel free to use the server and play with different commands</H4>
+		<BR/>
+		<DIV class='form'>
+		<FORM action='http://ServerIP/forms/gencmdform.html' class='formcg'>
+			<BUTTON type='submit' value='Submit'>go</BUTTON>
+			Execute Linux bash commands with <B>general-user</B> power
+		</FORM>
+		<BR/>
+		<FORM action='http://ServerIP/forms/cmdform.html' class='formcr'>
+			<BUTTON type='submit' value='Submit'>go</BUTTON>
+			Execute Linux bash commands with <B>root-user</B> power
+		</FORM>
+		<BR/>
+		<FORM action='http://ServerIP/forms/docker.html' class='formd'>
+			<BUTTON type='submit' value='Submit'>go</BUTTON>
+			Use Docker-CE software
+		</FORM>
+		<BR/>
+		<FORM action='http://ServerIP/forms/cont.html' class='formc'>
+			<BUTTON type='submit' value='Submit'>go</BUTTON>
+			Use OS if created before
+		</FORM>
+		</DIV>
+		<BR/><BR/>
+		<DIV class='footer'>
+			<P>commands executed are subjected to permissions | contact helpdesk@xyz.com for more info</P>
+		</DIV>
+	</BODY>
+</HTML>
+
