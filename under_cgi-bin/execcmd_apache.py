@@ -11,13 +11,19 @@ cmd = form.getvalue("cmd")
 
 if 'sudo' in cmd:
     cmd = cmd.replace('sudo', '')
-    print("Cannot allow use of sudo for general users | \n")
+    print("Cannot allow use of sudo for general users")
 
-print("command: {} \n".format(cmd))
+if 'docker ' in cmd:
+    print("You are not authorized to use docker-ce!")
+    exit()
+
+print("command: {} | ".format(cmd))
 output = subprocess.getstatusoutput(cmd)
 
-print("status-code: {} \n".format(output[0]))
+print("status-code: {} | ".format(output[0]))
 print()
-print("output: <PRE> {} <PRE> \n".format(output[1]))
+print("output: <PRE> {} </PRE> \n".format(output[1]))
+print("<BR>")
+
 print()
 
