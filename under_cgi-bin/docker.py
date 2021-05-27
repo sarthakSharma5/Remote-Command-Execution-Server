@@ -30,7 +30,7 @@ def reply():
     print("<PRE> {} </PRE> \n".format(setcolhead[1]))
     print("<PRE> {} </PRE> \n".format(checkout[1]))
 
-    print('Use this link to work with container: http://192.168.99.103/forms/cont.html')
+    print("Use this link to work with container: <A href='http://192.168.99.103/forms/cont.html'>/forms/cont.html<A>")
 
 rep=threading.Thread( target=reply )
 rep.start()
