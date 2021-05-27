@@ -2,19 +2,24 @@
 
 import subprocess
 import cgi
+import threading
 
-print("content-type: text/html")
-print()
+def reply():
+  print("content-type: text/html")
+  print()
 
-form = cgi.FieldStorage()
-get_cmd = form.getvalue("cmd")
+  form = cgi.FieldStorage()
+  get_cmd = form.getvalue("cmd")
 
-# cmd = "date"
-cmd = "sudo "+get_cmd
-print("command: {} | \n".format(cmd))
-output = subprocess.getstatusoutput(cmd)
+  # cmd = "date"
+  cmd = "sudo "+get_cmd
+  print("command: {} | \n".format(cmd))
+  output = subprocess.getstatusoutput(cmd)
 
-print("status-code: {} | \n".format(output[0]))
-print()
-print("output: <PRE> {} <PRE> \n".format(output[1]))
-print()
+  print("status-code: {} | \n".format(output[0]))
+  print()
+  print("output: <PRE> {} <PRE> \n".format(output[1]))
+  print()
+
+rep = threading.Thread( target=reply )
+rep.start()
